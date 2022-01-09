@@ -1,0 +1,5 @@
+*.nc
+*.DS_store
+*.csv
+*.zip
+*.pyc
