@@ -26,7 +26,6 @@ from keras.preprocessing.text import Tokenizer
 from nltk import word_tokenize, pos_tag
 # nltk.download()
 from keras.preprocessing.sequence import pad_sequences
-from keras.models import model_from_json
 from math import log
 # import zlib 
 
@@ -2387,7 +2386,13 @@ class preprocessing(object):
         json_file  = open(model_path+'model.json', 'r')
         loaded_model_json = json_file.read()
         json_file.close()
-        loaded_model = model_from_json(loaded_model_json)
+        if 'bert' in model_path:
+            from tensorflow.keras.models import model_from_json
+            import tensorflow_hub as hub
+            loaded_model = model_from_json(loaded_model_json, custom_objects={'KerasLayer': hub.KerasLayer})
+        else:
+            from keras.models import model_from_json
+            loaded_model = model_from_json(loaded_model_json)
         loaded_model.load_weights(model_path+'model.h5')
         loaded_model.compile(
             loss = 'binary_crossentropy', 

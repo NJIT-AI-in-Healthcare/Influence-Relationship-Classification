@@ -19,10 +19,12 @@ This is the input dataset for influence classification. There are 7 columns:
 7. BC: The label presents whether reply_post and initial_author_reply are relevant.
 ### [pairs.csv](./relevant_classification_model/pairs.csv)
 This is the input dataset for relevance classification. There are 4 columns:
-1. post1: The word index of the first post in the relevance pair. (The corresponding embedding vectors can be found in [bert](https://pypi.org/project/bert-embedding/) and [word2vec](./relevant_classification_model/post1_embedding.csv.zip))
-2. post2: The word index of the second post in the relevance pair. (The corresponding embedding vectors can be found in [bert](https://pypi.org/project/bert-embedding/) and [word2vec](./relevant_classification_model/post2_embedding.csv.zip))
+1. post1: The word index of the first post in the relevance pair. (The corresponding embedding vectors can be found in [bert](./relevant_classification_model/bert_embedding.csv.zip) and [word2vec for post1](./relevant_classification_model/post1_word2vec_embedding.csv.zip))
+2. post2: The word index of the second post in the relevance pair. (The corresponding embedding vectors can be found in [bert](./relevant_classification_model/bert_embedding.csv.zip) and [word2vec for post2](./relevant_classification_model/post2_word2vec_embedding.csv.zip))
 3. label: The label presents whether post1 and post2 are relevant.
 4. train_or_test: The label presents whether the pair are used for training or testing.
+
+Note: For the embedding files ([bert](./relevant_classification_model/bert_embedding.csv.zip), [word2vec for post1](./relevant_classification_model/post1_word2vec_embedding.csv.zip), and [word2vec for post2](./relevant_classification_model/post2_word2vec_embedding.csv.zip)), each row is starting with the token index and following with the corresponding embedding values.
 ## Built With
 Following are the major frameworks/libraries used to bootstrap this project:
 * [pandas](https://pandas.pydata.org/)

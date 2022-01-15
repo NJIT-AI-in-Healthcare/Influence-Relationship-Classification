@@ -63,7 +63,6 @@ relevance_nb_epoch = 5
 influence_nb_epoch = 15
 train_ratio = 0.95
 max_features = 20000
-maxlen = 300
 output_dim = 2
 threshold = 0.5
 
