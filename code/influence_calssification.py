@@ -147,8 +147,8 @@ model_mapping = {
 
 from numpy.random import seed
 seed(10)
-from tensorflow import set_random_seed
-set_random_seed(20)
+import tensorflow
+tensorflow.random.set_seed(20)
     
 # train or load choices
 gen_new_input = False
