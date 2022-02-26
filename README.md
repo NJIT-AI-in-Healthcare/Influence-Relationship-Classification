@@ -24,7 +24,7 @@ This is the input dataset for relevance classification. There are 4 columns:
 3. label: The label presents whether post1 and post2 are relevant.
 4. train_or_test: The label presents whether the pair are used for training or testing.
 
-Note: For the embedding files ([bert](./relevant_classification_model/bert_embedding.csv.zip), [word2vec for post1](./relevant_classification_model/post1_word2vec_embedding.csv.zip), and [word2vec for post2](./relevant_classification_model/post2_word2vec_embedding.csv.zip)), each row is starting with the token index and following with the corresponding embedding values. For BERT, we are using the bert embedding lib for tensorflow 2.0 (https://github.com/kpe/bert-for-tf2).
+Note: For the embedding files ([bert](./relevant_classification_model/bert_embedding.csv.zip), [word2vec for post1](./relevant_classification_model/post1_word2vec_embedding.csv.zip), and [word2vec for post2](./relevant_classification_model/post2_word2vec_embedding.csv.zip)), each row is starting with the token index and following with the corresponding embedding values. For BERT, we are using the bert embedding lib for tensorflow 2.0 (https://github.com/kpe/bert-for-tf2). For word2vec, we are using the keras embedding layer (https://keras.io/api/layers/core_layers/embedding/).
 ## Built With
 Following are the major frameworks/libraries used to bootstrap this project:
 * [pandas](https://pandas.pydata.org/)
